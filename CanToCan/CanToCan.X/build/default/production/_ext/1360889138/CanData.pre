@@ -21267,7 +21267,7 @@ Can.Buf[1] = timeHex >> 8;
 Can.Buf[2] = timeHex >> 16;
 Can.Buf[3] = timeHex >> 24;
 Can.Len = 4;
-Can.ID = MakeFeimoCanId(0, 0x18, 0x00, 0x01, ActSensor->Name, addr);
+Can.ID = MakeFeimoCanId(0, 0x18, 0x00, 0x01, ActSensor->Name, addr + Sys.AddrOffset);
 CanUpSend(Can);
 break;
 
@@ -21282,7 +21282,7 @@ Can.Buf[Can.Len++] = ActSensor->CurValue;
 Can.Buf[Can.Len++] = ActSensor->CurValue >> 8;
 Can.Buf[Can.Len++] = Sys.UpLoadTime;
 Can.Buf[Can.Len++] = (Sys.UpLoadTime >> 8);
-Can.ID = MakeFeimoCanId(0, 0x11, 0x00, 0x01, ActSensor->Name, addr);
+Can.ID = MakeFeimoCanId(0, 0x11, 0x00, 0x01, ActSensor->Name, addr + Sys.AddrOffset);
 }
 else
 {
@@ -21293,7 +21293,7 @@ Can.Buf[Can.Len++] = 0;
 Can.Buf[Can.Len++] = 0;
 Can.Buf[Can.Len++] = Sys.UpLoadTime;
 Can.Buf[Can.Len++] = (Sys.UpLoadTime >> 8);
-Can.ID = MakeFeimoCanId(0, 0x11, 0x00, 0x01, 0x1F, addr);
+Can.ID = MakeFeimoCanId(0, 0x11, 0x00, 0x01, 0x1F, addr + Sys.AddrOffset);
 }
 CanUpSend(Can);
 break;
@@ -21302,7 +21302,7 @@ case 0x33:
 Can.Len = 0;
 Can.Buf[Can.Len++] = Sys.UpLoadTime;
 Can.Buf[Can.Len++] = (Sys.UpLoadTime >> 8);
-Can.ID = MakeFeimoCanId(0, 0x33, 0x00, 0x01, ActSensor->Name, addr);
+Can.ID = MakeFeimoCanId(0, 0x33, 0x00, 0x01, ActSensor->Name, addr + Sys.AddrOffset);
 CanUpSend(Can);
 break;
 
@@ -21310,7 +21310,7 @@ case 0x34:
 Sys.UpLoadTime = Can.Buf[1];
 Sys.UpLoadTime <<= 8;
 Sys.UpLoadTime += Can.Buf[0];
-Can.ID = MakeFeimoCanId(0, 0x34, 0x00, 0x01, 0x1F, addr);
+Can.ID = MakeFeimoCanId(0, 0x34, 0x00, 0x01, 0x1F, addr + Sys.AddrOffset);
 Can.Len = 2;
 WriteBreaker(*Breaker);
 CanUpSend(Can);
@@ -21321,7 +21321,7 @@ if (Breaker->Addr == 0)
 {
 Can.Buf[0] = ActSensor->OffTimeout;
 Can.Buf[1] = ActSensor->OffTimeout >> 8;
-Can.ID = MakeFeimoCanId(0, 0x3B, 0x00, 0x01, ActSensor->Name, addr);
+Can.ID = MakeFeimoCanId(0, 0x3B, 0x00, 0x01, ActSensor->Name, addr + Sys.AddrOffset);
 Can.Len = 2;
 CanUpSend(Can);
 }
@@ -21333,7 +21333,7 @@ if (Breaker->Addr == 0)
 ActSensor->OffTimeout = Can.Buf[1];
 ActSensor->OffTimeout <<= 8;
 ActSensor->OffTimeout += Can.Buf[0];
-Can.ID = MakeFeimoCanId(0, 0x3C, 0x00, 0x01, ActSensor->Name, addr);
+Can.ID = MakeFeimoCanId(0, 0x3C, 0x00, 0x01, ActSensor->Name, addr + Sys.AddrOffset);
 Can.Len = 2;
 WriteLocalSenserConfig(*ActSensor);
 CanUpSend(Can);

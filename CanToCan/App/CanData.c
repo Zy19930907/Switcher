@@ -454,7 +454,7 @@ void HandleCanData(u8 index)
 			Can.Buf[2] = timeHex >> 16;
 			Can.Buf[3] = timeHex >> 24;
 			Can.Len = 4;
-			Can.ID = MakeFeimoCanId(0, CMD_GETTIME, NCTR, DIR_UP, ActSensor->Name, addr);
+			Can.ID = MakeFeimoCanId(0, CMD_GETTIME, NCTR, DIR_UP, ActSensor->Name, addr + Sys.AddrOffset);
 			CanUpSend(Can);
 			break;
 
@@ -469,7 +469,7 @@ void HandleCanData(u8 index)
 				Can.Buf[Can.Len++] = ActSensor->CurValue >> 8;
 				Can.Buf[Can.Len++] = Sys.UpLoadTime;
 				Can.Buf[Can.Len++] = (Sys.UpLoadTime >> 8);
-				Can.ID = MakeFeimoCanId(0, CMD_GETSENSERINFO, NCTR, DIR_UP, ActSensor->Name, addr);
+				Can.ID = MakeFeimoCanId(0, CMD_GETSENSERINFO, NCTR, DIR_UP, ActSensor->Name, addr + Sys.AddrOffset);
 			} 
 			else
 			{
@@ -480,7 +480,7 @@ void HandleCanData(u8 index)
 				Can.Buf[Can.Len++] = 0;
 				Can.Buf[Can.Len++] = Sys.UpLoadTime;
 				Can.Buf[Can.Len++] = (Sys.UpLoadTime >> 8);
-				Can.ID = MakeFeimoCanId(0, CMD_GETSENSERINFO, NCTR, DIR_UP, FM_POWERBREAKER, addr);
+				Can.ID = MakeFeimoCanId(0, CMD_GETSENSERINFO, NCTR, DIR_UP, FM_POWERBREAKER, addr + Sys.AddrOffset);
 			}
 			CanUpSend(Can);
 			break;
@@ -489,7 +489,7 @@ void HandleCanData(u8 index)
 			Can.Len = 0;
 			Can.Buf[Can.Len++] = Sys.UpLoadTime;
 			Can.Buf[Can.Len++] = (Sys.UpLoadTime >> 8);
-			Can.ID = MakeFeimoCanId(0, CMD_GETUPLOADTIME, NCTR, DIR_UP, ActSensor->Name, addr);
+			Can.ID = MakeFeimoCanId(0, CMD_GETUPLOADTIME, NCTR, DIR_UP, ActSensor->Name, addr + Sys.AddrOffset);
 			CanUpSend(Can);
 			break;
 
@@ -497,7 +497,7 @@ void HandleCanData(u8 index)
 			Sys.UpLoadTime = Can.Buf[1];
 			Sys.UpLoadTime <<= 8;
 			Sys.UpLoadTime += Can.Buf[0];
-			Can.ID = MakeFeimoCanId(0, CMD_SETUPLOADTIME, NCTR, DIR_UP, FM_POWERBREAKER, addr);
+			Can.ID = MakeFeimoCanId(0, CMD_SETUPLOADTIME, NCTR, DIR_UP, FM_POWERBREAKER, addr + Sys.AddrOffset);
 			Can.Len = 2;
 			WriteBreaker(*Breaker);
 			CanUpSend(Can);
@@ -508,7 +508,7 @@ void HandleCanData(u8 index)
 			{
 				Can.Buf[0] = ActSensor->OffTimeout;
 				Can.Buf[1] = ActSensor->OffTimeout >> 8;
-				Can.ID = MakeFeimoCanId(0, CMD_GETOFFLINETIME, NCTR, DIR_UP, ActSensor->Name, addr);
+				Can.ID = MakeFeimoCanId(0, CMD_GETOFFLINETIME, NCTR, DIR_UP, ActSensor->Name, addr + Sys.AddrOffset);
 				Can.Len = 2;
 				CanUpSend(Can);
 			}
@@ -520,7 +520,7 @@ void HandleCanData(u8 index)
 				ActSensor->OffTimeout = Can.Buf[1];
 				ActSensor->OffTimeout <<= 8;
 				ActSensor->OffTimeout += Can.Buf[0];
-				Can.ID = MakeFeimoCanId(0, CMD_SETOFFLINETIME, NCTR, DIR_UP, ActSensor->Name, addr);
+				Can.ID = MakeFeimoCanId(0, CMD_SETOFFLINETIME, NCTR, DIR_UP, ActSensor->Name, addr + Sys.AddrOffset);
 				Can.Len = 2;
 				WriteLocalSenserConfig(*ActSensor);
 				CanUpSend(Can);

@@ -223,22 +223,21 @@ void main(void)
 			}
 			CurRunLevel = LedRunLevel;
 			break;
-			//		case TestLevel:
-			//			if (MsTickDiff(Sys.tTick) >= 60000)
-			//			{
-			//				Sys.tTick = SYS_TICK;
-			//				for (TestCnt = 0; TestCnt < 8; TestCnt++)
-			//				{
-			//					TestCan.Buf[TestCnt] = LocalSensors[TestCnt].RecvCnt;
-			//					LocalSensors[TestCnt].RecvCnt = 0;
-			//				}
-			//				TestCan.Len = 8;
-			//				TestCan.ID = MakeFeimoCanId(0, 0x53, NCTR, DIR_UP, 0, 1);
-			//				CanUpSend(TestCan);
-			//			}
-			//			CurRunLevel = LedRunLevel;
-			//			break;
-
+			//case TestLevel:
+			//if (MsTickDiff(Sys.tTick) >= 60000)
+			//{
+			//		Sys.tTick = SYS_TICK;
+			//		for (TestCnt = 0; TestCnt < 8; TestCnt++)
+			//		{
+			//			TestCan.Buf[TestCnt] = LocalSensors[TestCnt].RecvCnt;
+			//			LocalSensors[TestCnt].RecvCnt = 0;
+			//		}
+			//			TestCan.Len = 8;
+			//			TestCan.ID = MakeFeimoCanId(0, 0x53, NCTR, DIR_UP, 0, 1);
+			//			CanUpSend(TestCan);
+			//}
+			//CurRunLevel = LedRunLevel;
+			//break;
 		default:
 			CurRunLevel = LedRunLevel;
 			break;

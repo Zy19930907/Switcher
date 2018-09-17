@@ -3286,48 +3286,60 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ProSwitch.c: 925: if (MsTickDiff(Breaker->Tick) >= 20000)
 "925
 [e $ ! >= ( _MsTickDiff (1 . *U _Breaker 14 -> -> 20000 `i `ui 203  ]
-[; ;ProSwitch.c: 926: Breaker->Flag |= 0x02;
+[; ;ProSwitch.c: 926: {
 "926
-[e =| . *U _Breaker 17 -> -> 2 `i `uc ]
-[e :U 203 ]
+{
+[; ;ProSwitch.c: 927: Breaker->Flag |= 0x02;
 "927
+[e =| . *U _Breaker 17 -> -> 2 `i `uc ]
+[; ;ProSwitch.c: 928: Breaker->Addr = 0;
+"928
+[e = . *U _Breaker 0 -> -> 0 `i `uc ]
+[; ;ProSwitch.c: 929: Breaker->Crc = 0;
+"929
+[e = . *U _Breaker 1 -> -> 0 `i `uc ]
+"930
+}
+[e :U 203 ]
+"931
 }
 [e :U 202 ]
-"928
+"932
 }
 "912
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i - -> 16 `i -> 1 `i 197  ]
 [e :U 198 ]
-"928
+"932
 }
-[; ;ProSwitch.c: 927: }
-[; ;ProSwitch.c: 928: }
-[; ;ProSwitch.c: 929: }
-"929
+[; ;ProSwitch.c: 930: }
+[; ;ProSwitch.c: 931: }
+[; ;ProSwitch.c: 932: }
+[; ;ProSwitch.c: 933: }
+"933
 [e :UE 196 ]
 }
-"931
+"935
 [v _Get3_0Config `(v ~T0 @X0 1 ef ]
-"932
+"936
 {
-[; ;ProSwitch.c: 931: void Get3_0Config(void)
-[; ;ProSwitch.c: 932: {
+[; ;ProSwitch.c: 935: void Get3_0Config(void)
+[; ;ProSwitch.c: 936: {
 [e :U _Get3_0Config ]
 [f ]
-"933
-[v _Quest `S5 ~T0 @X0 1 a ]
-[; ;ProSwitch.c: 933: CCan Quest;
-[; ;ProSwitch.c: 934: Quest.ID = MakeFeimoCanId(0, 0x57, 0x00, 0x01, 0x37, Sys.AddrOffset);
-"934
-[e = . _Quest 3 ( _MakeFeimoCanId (4 , , , , , -> -> 0 `i `uc -> -> 87 `i `uc -> -> 0 `i `uc -> -> 1 `i `uc -> -> 55 `i `uc . _Sys 1 ]
-[; ;ProSwitch.c: 935: Quest.Len = 0;
-"935
-[e = . _Quest 2 -> -> 0 `i `uc ]
-[; ;ProSwitch.c: 936: CanUpSend(Quest);
-"936
-[e ( _CanUpSend (1 _Quest ]
-[; ;ProSwitch.c: 937: }
 "937
+[v _Quest `S5 ~T0 @X0 1 a ]
+[; ;ProSwitch.c: 937: CCan Quest;
+[; ;ProSwitch.c: 938: Quest.ID = MakeFeimoCanId(0, 0x57, 0x00, 0x01, 0x37, Sys.AddrOffset);
+"938
+[e = . _Quest 3 ( _MakeFeimoCanId (4 , , , , , -> -> 0 `i `uc -> -> 87 `i `uc -> -> 0 `i `uc -> -> 1 `i `uc -> -> 55 `i `uc . _Sys 1 ]
+[; ;ProSwitch.c: 939: Quest.Len = 0;
+"939
+[e = . _Quest 2 -> -> 0 `i `uc ]
+[; ;ProSwitch.c: 940: CanUpSend(Quest);
+"940
+[e ( _CanUpSend (1 _Quest ]
+[; ;ProSwitch.c: 941: }
+"941
 [e :UE 204 ]
 }

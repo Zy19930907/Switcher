@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F25K80 ]
 [d frameptr 4065 ]
-"79 C:\Users\Administrator\Desktop\CanToCan/App/main.c
+"79 F:\GitHub\Switcher\CanToCan/App/main.c
 [e E17915 . `uc
 LedRunLevel 0
 VoltageSample 1
@@ -16,28 +16,28 @@ TimeLevel 7
 PowerUploadLevel 8
 UploadSwitcherInfo 9
 ]
-"8 C:\Users\Administrator\Desktop\CanToCan/App/CanData.c
+"8 F:\GitHub\Switcher\CanToCan/App/CanData.c
 [e E17975 . `uc
 INITCAN 0
 NORMAL 1
 TX 2
 TXING 3
 ]
-"78 C:\Users\Administrator\Desktop\CanToCan/App/ProSwitch.c
+"78 F:\GitHub\Switcher\CanToCan/App/ProSwitch.c
 [e E132 . `uc
 INITCAN 0
 NORMAL 1
 TX 2
 TXING 3
 ]
-"115 C:\Users\Administrator\Desktop\CanToCan/Hardware/Can.c
+"115 F:\GitHub\Switcher\CanToCan/Hardware/Can.c
 [e E17975 . `uc
 INITCAN 0
 NORMAL 1
 TX 2
 TXING 3
 ]
-"17 C:\Users\Administrator\Desktop\CanToCan/App/CanData.c
+"17 F:\GitHub\Switcher\CanToCan/App/CanData.c
 [v _ResetInitInfo ResetInitInfo `(v  1 e 1 0 ]
 "25
 [v _CalCrcConfig CalCrcConfig `(ui  1 e 2 0 ]
@@ -55,11 +55,11 @@ TXING 3
 [v _CanUpReceiveFunc CanUpReceiveFunc `(v  1 e 1 0 ]
 "625
 [v _CanDownReceiveFunc CanDownReceiveFunc `(v  1 e 1 0 ]
-"89 C:\Users\Administrator\Desktop\CanToCan/App/main.c
+"89 F:\GitHub\Switcher\CanToCan/App/main.c
 [v _FlashLed FlashLed `(v  1 e 1 0 ]
 "104
 [v _main main `(v  1 e 1 0 ]
-"38 C:\Users\Administrator\Desktop\CanToCan/App/ProSwitch.c
+"38 F:\GitHub\Switcher\CanToCan/App/ProSwitch.c
 [v _MakePekingCanId MakePekingCanId `(ul  1 e 4 0 ]
 "59
 [v _MakeFeimoCanId MakeFeimoCanId `(ul  1 e 4 0 ]
@@ -103,9 +103,9 @@ TXING 3
 [v _UpLoadControlInfo UpLoadControlInfo `(v  1 e 1 0 ]
 "907
 [v _SensorOnlineCheck SensorOnlineCheck `(v  1 e 1 0 ]
-"931
+"935
 [v _Get3_0Config Get3_0Config `(v  1 e 1 0 ]
-"13 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"13 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _MsTickDiff MsTickDiff `(ui  1 e 2 0 ]
 "21
 [v _SecTickDiff SecTickDiff `(ui  1 e 2 0 ]
@@ -121,29 +121,29 @@ TXING 3
 [v _CRC16Check CRC16Check `(uc  1 e 1 0 ]
 "84
 [v _CalCrcInit CalCrcInit `(ui  1 e 2 0 ]
-"101 C:\Users\Administrator\Desktop\CanToCan/Header\Public.h
+"101 F:\GitHub\Switcher\CanToCan/Header\Public.h
 [s S47 . 102 `uc 1 Addr 1 0 `uc 1 Crc 1 1 `uc 1 ForceControlFlag 1 2 `uc 1 ForceControlPort 1 3 `uc 1 CrossControlFlag 1 4 `uc 1 CrossControlPort 1 5 `[15]uc 1 LocalTriggers 15 6 `[15]uc 1 LocalTriggerAddrs 15 21 `[24]uc 1 RemoteTriggers 24 36 `[24]uc 1 RemoteTriggerAddrs 24 60 `uc 1 RelevanceLocalSensorCnt 1 84 `uc 1 RelevanceRemoteSensorCnt 1 85 `[4]uc 1 Break3_0Addrs 4 86 `uc 1 Break3_0Cnt 1 90 `ui 1 Tick 2 91 `ui 1 UpLoadTick 2 93 `uc 1 ActCnt 1 95 `uc 1 Flag 1 96 `uc 1 TriggerAddr 1 97 `ui 1 ActTick 2 98 `ui 1 CurValue 2 100 ]
-"95 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"95 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _GetBreaker GetBreaker `(*.39S47  1 e 2 0 ]
-"101 C:\Users\Administrator\Desktop\CanToCan/Header\Public.h
+"101 F:\GitHub\Switcher\CanToCan/Header\Public.h
 [s S47 . 102 `uc 1 Addr 1 0 `uc 1 Crc 1 1 `uc 1 ForceControlFlag 1 2 `uc 1 ForceControlPort 1 3 `uc 1 CrossControlFlag 1 4 `uc 1 CrossControlPort 1 5 `[15]uc 1 LocalTriggers 15 6 `[15]uc 1 LocalTriggerAddrs 15 21 `[24]uc 1 RemoteTriggers 24 36 `[24]uc 1 RemoteTriggerAddrs 24 60 `uc 1 RelevanceLocalSensorCnt 1 84 `uc 1 RelevanceRemoteSensorCnt 1 85 `[4]uc 1 Break3_0Addrs 4 86 `uc 1 Break3_0Cnt 1 90 `ui 1 Tick 2 91 `ui 1 UpLoadTick 2 93 `uc 1 ActCnt 1 95 `uc 1 Flag 1 96 `uc 1 TriggerAddr 1 97 `ui 1 ActTick 2 98 `ui 1 CurValue 2 100 ]
-"106 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"106 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _FilterBreaker FilterBreaker `(*.39S47  1 e 2 0 ]
 "124
 [v _IsSensorLinkWithBreaker IsSensorLinkWithBreaker `(uc  1 e 1 0 ]
 "135
 [v _GetBreakerIndex GetBreakerIndex `(uc  1 e 1 0 ]
-"101 C:\Users\Administrator\Desktop\CanToCan/Header\Public.h
+"101 F:\GitHub\Switcher\CanToCan/Header\Public.h
 [s S47 . 102 `uc 1 Addr 1 0 `uc 1 Crc 1 1 `uc 1 ForceControlFlag 1 2 `uc 1 ForceControlPort 1 3 `uc 1 CrossControlFlag 1 4 `uc 1 CrossControlPort 1 5 `[15]uc 1 LocalTriggers 15 6 `[15]uc 1 LocalTriggerAddrs 15 21 `[24]uc 1 RemoteTriggers 24 36 `[24]uc 1 RemoteTriggerAddrs 24 60 `uc 1 RelevanceLocalSensorCnt 1 84 `uc 1 RelevanceRemoteSensorCnt 1 85 `[4]uc 1 Break3_0Addrs 4 86 `uc 1 Break3_0Cnt 1 90 `ui 1 Tick 2 91 `ui 1 UpLoadTick 2 93 `uc 1 ActCnt 1 95 `uc 1 Flag 1 96 `uc 1 TriggerAddr 1 97 `ui 1 ActTick 2 98 `ui 1 CurValue 2 100 ]
-"146 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"146 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _GetBreakerByIndex GetBreakerByIndex `(*.39S47  1 e 2 0 ]
-"84 C:\Users\Administrator\Desktop\CanToCan/Header\Public.h
+"84 F:\GitHub\Switcher\CanToCan/Header\Public.h
 [s S38 . 14 `uc 1 Addr 1 0 `ui 1 UpDuanDian 2 1 `ui 1 UpFuDian 2 3 `ui 1 DownDuanDian 2 5 `ui 1 DownFuDian 2 7 `uc 1 CtrFlag 1 9 `ui 1 Tick 2 10 `ui 1 CurValue 2 12 ]
-"151 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"151 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _GetRemoteSensor GetRemoteSensor `(*.39S38  1 e 2 0 ]
-"84 C:\Users\Administrator\Desktop\CanToCan/Header\Public.h
+"84 F:\GitHub\Switcher\CanToCan/Header\Public.h
 [s S38 . 14 `uc 1 Addr 1 0 `ui 1 UpDuanDian 2 1 `ui 1 UpFuDian 2 3 `ui 1 DownDuanDian 2 5 `ui 1 DownFuDian 2 7 `uc 1 CtrFlag 1 9 `ui 1 Tick 2 10 `ui 1 CurValue 2 12 ]
-"162 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"162 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _FilterRemoteSensor FilterRemoteSensor `(*.39S38  1 e 2 0 ]
 "181
 [v _GetRemoteSensorIndex GetRemoteSensorIndex `(uc  1 e 1 0 ]
@@ -153,7 +153,7 @@ TXING 3
 [v _CheckRemoteSensor CheckRemoteSensor `(v  1 e 1 0 ]
 "223
 [v _GetChuShu GetChuShu `(ui  1 e 2 0 ]
-"18 C:\Users\Administrator\Desktop\CanToCan/Hardware/Can.c
+"18 F:\GitHub\Switcher\CanToCan/Hardware/Can.c
 [v _CanUpInit CanUpInit `(v  1 e 1 0 ]
 "92
 [v _CheckCanUpTxBuf CheckCanUpTxBuf `(uc  1 e 1 0 ]
@@ -179,7 +179,7 @@ TXING 3
 [v _ModifyReg ModifyReg `(v  1 e 1 0 ]
 "283
 [v _CanDownInit CanDownInit `(v  1 e 1 0 ]
-"56 C:\Users\Administrator\Desktop\CanToCan/Hardware/CPU.c
+"56 F:\GitHub\Switcher\CanToCan/Hardware/CPU.c
 [v _WriteBurstEEprom WriteBurstEEprom `(v  1 e 1 0 ]
 "79
 [v _ReadBurstEEprom ReadBurstEEprom `(v  1 e 1 0 ]
@@ -284,7 +284,7 @@ TXING 3
 "15 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 [s S519 . 14 `E17975 1 Status 1 0 `[8]uc 1 Buf 8 1 `uc 1 Len 1 9 `ul 1 ID 4 10 ]
-"8 C:\Users\Administrator\Desktop\CanToCan/App/CanData.c
+"8 F:\GitHub\Switcher\CanToCan/App/CanData.c
 [v _Can Can `S519  1 e 14 0 ]
 [s S385 . 17 `uc 1 Addr 1 0 `uc 1 AddrOffset 1 1 `uc 1 Delay 1 2 `uc 1 Vol 1 3 `uc 1 UploadCnt 1 4 `uc 1 CrcSendCnt 1 5 `uc 1 InitDelay 1 6 `uc 1 UploadFlag 1 7 `uc 1 Get3_0 1 8 `ui 1 OfflineLianDongFlag 2 9 `ui 1 TriggerLianDongFlag 2 11 `ui 1 UpLoadTime 2 13 `ui 1 OnlineFlag 2 15 ]
 "9
@@ -292,7 +292,7 @@ TXING 3
 [s S538 . 103 `uc 1 R 1 0 `uc 1 W 1 1 `uc 1 Addr 1 2 `[100]uc 1 InitValue 100 3 ]
 "15
 [v _InitInfo InitInfo `S538  1 e 103 0 ]
-"79 C:\Users\Administrator\Desktop\CanToCan/App/main.c
+"79 F:\GitHub\Switcher\CanToCan/App/main.c
 [v _CurRunLevel CurRunLevel `E17915  1 e 1 0 ]
 "80
 [v _RunTick RunTick `[10]ui  1 e 20 0 ]
@@ -300,7 +300,7 @@ TXING 3
 [v _LedTime LedTime `ui  1 e 2 0 ]
 "82
 [v _TestCnt TestCnt `uc  1 e 1 0 ]
-"6 C:\Users\Administrator\Desktop\CanToCan/App/ProSwitch.c
+"6 F:\GitHub\Switcher\CanToCan/App/ProSwitch.c
 [v _PekingPowerData PekingPowerData `[7][8]uc  1 e 56 0 ]
 [s S1162 . 2 `uc 1 UploadCnt 1 0 `uc 1 Tick 1 1 ]
 "7
@@ -320,7 +320,7 @@ TXING 3
 "33
 [v _sensor_result sensor_result `[3]uc  1 e 3 0 ]
 [s S21 . 26 `uc 1 Crc 1 0 `uc 1 SensorFlag 1 1 `ui 1 UpWarn 2 2 `ui 1 UpDuanDian 2 4 `ui 1 UpFuDian 2 6 `ui 1 DownWarn 2 8 `ui 1 DownDuanDian 2 10 `ui 1 DownFuDian 2 12 `uc 1 Addr 1 14 `uc 1 Name 1 15 `uc 1 CtrFlag 1 16 `uc 1 Delay 1 17 `ui 1 OffTimeout 2 18 `ui 1 CurValue 2 20 `ui 1 Tick 2 22 `ui 1 UpLoadTick 2 24 ]
-"5 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"5 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _LocalSensors LocalSensors `[16]S21  1 e 416 0 ]
 [s S38 . 14 `uc 1 Addr 1 0 `ui 1 UpDuanDian 2 1 `ui 1 UpFuDian 2 3 `ui 1 DownDuanDian 2 5 `ui 1 DownFuDian 2 7 `uc 1 CtrFlag 1 9 `ui 1 Tick 2 10 `ui 1 CurValue 2 12 ]
 "6
@@ -336,7 +336,7 @@ TXING 3
 [v _NoRemoteSensor NoRemoteSensor `S38  1 e 14 0 ]
 "11
 [v _Crc16 Crc16 `ui  1 e 2 0 ]
-"6 C:\Users\Administrator\Desktop\CanToCan/Hardware/CPU.c
+"6 F:\GitHub\Switcher\CanToCan/Hardware/CPU.c
 [v _SYS_TICK SYS_TICK `VEui  1 e 2 0 ]
 [v _SYS_TICK_1S SYS_TICK_1S `VEui  1 e 2 0 ]
 "7
@@ -714,12 +714,12 @@ TXING 3
 [v _TMR2IE TMR2IE `VEb  1 e 0 @31977 ]
 "44467
 [v _TMR2IF TMR2IF `VEb  1 e 0 @31985 ]
-"104 C:\Users\Administrator\Desktop\CanToCan/App/main.c
+"104 F:\GitHub\Switcher\CanToCan/App/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"247
+"246
 } 0
-"180 C:\Users\Administrator\Desktop\CanToCan/Hardware/CPU.c
+"180 F:\GitHub\Switcher\CanToCan/Hardware/CPU.c
 [v _VolSample VolSample `(v  1 e 1 0 ]
 {
 "182
@@ -738,7 +738,7 @@ TXING 3
 [v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
 "31
 } 0
-"167 C:\Users\Administrator\Desktop\CanToCan/Hardware/CPU.c
+"167 F:\GitHub\Switcher\CanToCan/Hardware/CPU.c
 [v _GetVolInputValue GetVolInputValue `(ui  1 e 2 0 ]
 {
 [v GetVolInputValue@ch ch `uc  1 a 1 wreg ]
@@ -750,7 +750,7 @@ TXING 3
 [v GetVolInputValue@ch ch `uc  1 a 1 3 ]
 "177
 } 0
-"782 C:\Users\Administrator\Desktop\CanToCan/App/ProSwitch.c
+"782 F:\GitHub\Switcher\CanToCan/App/ProSwitch.c
 [v _UploadPowerData UploadPowerData `(v  1 e 1 0 ]
 {
 [s S519 . 14 `E17975 1 Status 1 0 `[8]uc 1 Buf 8 1 `uc 1 Len 1 9 `ul 1 ID 4 10 ]
@@ -794,12 +794,12 @@ TXING 3
 [v UpLoadControlInfo@temp temp `uc  1 a 1 31 ]
 "905
 } 0
-"332 C:\Users\Administrator\Desktop\CanToCan/Hardware/CPU.c
+"332 F:\GitHub\Switcher\CanToCan/Hardware/CPU.c
 [v _TimePro TimePro `(v  1 e 1 0 ]
 {
 "347
 } 0
-"562 C:\Users\Administrator\Desktop\CanToCan/App/ProSwitch.c
+"562 F:\GitHub\Switcher\CanToCan/App/ProSwitch.c
 [v _SyncClk SyncClk `(v  1 e 1 0 ]
 {
 [s S519 . 14 `E17975 1 Status 1 0 `[8]uc 1 Buf 8 1 `uc 1 Len 1 9 `ul 1 ID 4 10 ]
@@ -810,23 +810,23 @@ TXING 3
 "907
 [v _SensorOnlineCheck SensorOnlineCheck `(v  1 e 1 0 ]
 {
-[s S21 . 26 `uc 1 Crc 1 0 `uc 1 SensorFlag 1 1 `ui 1 UpWarn 2 2 `ui 1 UpDuanDian 2 4 `ui 1 UpFuDian 2 6 `ui 1 DownWarn 2 8 `ui 1 DownDuanDian 2 10 `ui 1 DownFuDian 2 12 `uc 1 Addr 1 14 `uc 1 Name 1 15 `uc 1 CtrFlag 1 16 `uc 1 Delay 1 17 `ui 1 OffTimeout 2 18 `ui 1 CurValue 2 20 `ui 1 Tick 2 22 `ui 1 UpLoadTick 2 24 ]
-"910
-[v SensorOnlineCheck@Sensor Sensor `*.39S21  1 a 2 16 ]
 [s S47 . 102 `uc 1 Addr 1 0 `uc 1 Crc 1 1 `uc 1 ForceControlFlag 1 2 `uc 1 ForceControlPort 1 3 `uc 1 CrossControlFlag 1 4 `uc 1 CrossControlPort 1 5 `[15]uc 1 LocalTriggers 15 6 `[15]uc 1 LocalTriggerAddrs 15 21 `[24]uc 1 RemoteTriggers 24 36 `[24]uc 1 RemoteTriggerAddrs 24 60 `uc 1 RelevanceLocalSensorCnt 1 84 `uc 1 RelevanceRemoteSensorCnt 1 85 `[4]uc 1 Break3_0Addrs 4 86 `uc 1 Break3_0Cnt 1 90 `ui 1 Tick 2 91 `ui 1 UpLoadTick 2 93 `uc 1 ActCnt 1 95 `uc 1 Flag 1 96 `uc 1 TriggerAddr 1 97 `ui 1 ActTick 2 98 `ui 1 CurValue 2 100 ]
 "911
-[v SensorOnlineCheck@Breaker Breaker `*.39S47  1 a 2 14 ]
+[v SensorOnlineCheck@Breaker Breaker `*.39S47  1 a 2 17 ]
+[s S21 . 26 `uc 1 Crc 1 0 `uc 1 SensorFlag 1 1 `ui 1 UpWarn 2 2 `ui 1 UpDuanDian 2 4 `ui 1 UpFuDian 2 6 `ui 1 DownWarn 2 8 `ui 1 DownDuanDian 2 10 `ui 1 DownFuDian 2 12 `uc 1 Addr 1 14 `uc 1 Name 1 15 `uc 1 CtrFlag 1 16 `uc 1 Delay 1 17 `ui 1 OffTimeout 2 18 `ui 1 CurValue 2 20 `ui 1 Tick 2 22 `ui 1 UpLoadTick 2 24 ]
+"910
+[v SensorOnlineCheck@Sensor Sensor `*.39S21  1 a 2 14 ]
 "909
-[v SensorOnlineCheck@i i `uc  1 a 1 18 ]
-"929
+[v SensorOnlineCheck@i i `uc  1 a 1 16 ]
+"933
 } 0
-"21 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"21 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _SecTickDiff SecTickDiff `(ui  1 e 2 0 ]
 {
 [v SecTickDiff@tick tick `ui  1 p 2 0 ]
 "27
 } 0
-"549 C:\Users\Administrator\Desktop\CanToCan/Hardware/CPU.c
+"549 F:\GitHub\Switcher\CanToCan/Hardware/CPU.c
 [v _ReadAllRemoteSensor ReadAllRemoteSensor `(v  1 e 1 0 ]
 {
 "551
@@ -906,7 +906,7 @@ TXING 3
 [v ReadBurstEEprom@len len `ui  1 p 2 3 ]
 "97
 } 0
-"72 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"72 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _CRC16Check CRC16Check `(uc  1 e 1 0 ]
 {
 [v CRC16Check@buf buf `*.30uc  1 a 1 wreg ]
@@ -916,7 +916,7 @@ TXING 3
 [v CRC16Check@buf buf `*.30uc  1 a 1 9 ]
 "80
 } 0
-"110 C:\Users\Administrator\Desktop\CanToCan/Hardware/CPU.c
+"110 F:\GitHub\Switcher\CanToCan/Hardware/CPU.c
 [v _ReadAddr ReadAddr `(v  1 e 1 0 ]
 {
 "112
@@ -927,15 +927,15 @@ TXING 3
 [v ReadAddr@F18107 F18107 `[8]uc  1 s 8 F18107 ]
 "118
 } 0
-"931 C:\Users\Administrator\Desktop\CanToCan/App/ProSwitch.c
+"935 F:\GitHub\Switcher\CanToCan/App/ProSwitch.c
 [v _Get3_0Config Get3_0Config `(v  1 e 1 0 ]
 {
 [s S519 . 14 `E17975 1 Status 1 0 `[8]uc 1 Buf 8 1 `uc 1 Len 1 9 `ul 1 ID 4 10 ]
-"933
-[v Get3_0Config@Quest Quest `S519  1 a 14 25 ]
 "937
+[v Get3_0Config@Quest Quest `S519  1 a 14 25 ]
+"941
 } 0
-"89 C:\Users\Administrator\Desktop\CanToCan/App/main.c
+"89 F:\GitHub\Switcher\CanToCan/App/main.c
 [v _FlashLed FlashLed `(v  1 e 1 0 ]
 {
 [v FlashLed@times times `uc  1 a 1 wreg ]
@@ -949,7 +949,7 @@ TXING 3
 [v FlashLed@times times `uc  1 a 1 4 ]
 "102
 } 0
-"611 C:\Users\Administrator\Desktop\CanToCan/App/ProSwitch.c
+"611 F:\GitHub\Switcher\CanToCan/App/ProSwitch.c
 [v _DuanDianPro DuanDianPro `(v  1 e 1 0 ]
 {
 "613
@@ -994,9 +994,9 @@ TXING 3
 [v RePower@Addr Addr `uc  1 a 1 25 ]
 "94
 } 0
-"101 C:\Users\Administrator\Desktop\CanToCan/Header\Public.h
+"101 F:\GitHub\Switcher\CanToCan/Header\Public.h
 [s S47 . 102 `uc 1 Addr 1 0 `uc 1 Crc 1 1 `uc 1 ForceControlFlag 1 2 `uc 1 ForceControlPort 1 3 `uc 1 CrossControlFlag 1 4 `uc 1 CrossControlPort 1 5 `[15]uc 1 LocalTriggers 15 6 `[15]uc 1 LocalTriggerAddrs 15 21 `[24]uc 1 RemoteTriggers 24 36 `[24]uc 1 RemoteTriggerAddrs 24 60 `uc 1 RelevanceLocalSensorCnt 1 84 `uc 1 RelevanceRemoteSensorCnt 1 85 `[4]uc 1 Break3_0Addrs 4 86 `uc 1 Break3_0Cnt 1 90 `ui 1 Tick 2 91 `ui 1 UpLoadTick 2 93 `uc 1 ActCnt 1 95 `uc 1 Flag 1 96 `uc 1 TriggerAddr 1 97 `ui 1 ActTick 2 98 `ui 1 CurValue 2 100 ]
-"146 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"146 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _GetBreakerByIndex GetBreakerByIndex `(*.39S47  1 e 2 0 ]
 {
 [v GetBreakerByIndex@index index `uc  1 a 1 wreg ]
@@ -1005,7 +1005,7 @@ TXING 3
 [v GetBreakerByIndex@index index `uc  1 a 1 2 ]
 "149
 } 0
-"76 C:\Users\Administrator\Desktop\CanToCan/App/ProSwitch.c
+"76 F:\GitHub\Switcher\CanToCan/App/ProSwitch.c
 [v _BreakPower BreakPower `(v  1 e 1 0 ]
 {
 [v BreakPower@Addr Addr `uc  1 a 1 wreg ]
@@ -1018,7 +1018,7 @@ TXING 3
 [v BreakPower@Addr Addr `uc  1 a 1 25 ]
 "84
 } 0
-"127 C:\Users\Administrator\Desktop\CanToCan/Hardware/CPU.c
+"127 F:\GitHub\Switcher\CanToCan/Hardware/CPU.c
 [v _CpuInit CpuInit `(v  1 e 1 0 ]
 {
 "138
@@ -1043,7 +1043,7 @@ TXING 3
 {
 "125
 } 0
-"18 C:\Users\Administrator\Desktop\CanToCan/Hardware/Can.c
+"18 F:\GitHub\Switcher\CanToCan/Hardware/Can.c
 [v _CanUpInit CanUpInit `(v  1 e 1 0 ]
 {
 "20
@@ -1057,23 +1057,23 @@ TXING 3
 [v CanDownInit@tick tick `ui  1 a 2 4 ]
 "320
 } 0
-"13 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"13 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _MsTickDiff MsTickDiff `(ui  1 e 2 0 ]
 {
 [v MsTickDiff@tick tick `ui  1 p 2 0 ]
 "19
 } 0
-"210 C:\Users\Administrator\Desktop\CanToCan/Hardware/Can.c
+"210 F:\GitHub\Switcher\CanToCan/Hardware/Can.c
 [v _MCP2515Reset MCP2515Reset `(v  1 e 1 0 ]
 {
 "215
 } 0
-"158 C:\Users\Administrator\Desktop\CanToCan/Hardware/CPU.c
+"158 F:\GitHub\Switcher\CanToCan/Hardware/CPU.c
 [v _AdInit AdInit `(v  1 e 1 0 ]
 {
 "165
 } 0
-"598 C:\Users\Administrator\Desktop\CanToCan/App/CanData.c
+"598 F:\GitHub\Switcher\CanToCan/App/CanData.c
 [v _CanUpReceiveFunc CanUpReceiveFunc `(v  1 e 1 0 ]
 {
 "600
@@ -1126,7 +1126,7 @@ TXING 3
 [v UpDateInit@SensorAddr SensorAddr `uc  1 a 1 106 ]
 "180
 } 0
-"470 C:\Users\Administrator\Desktop\CanToCan/Hardware/CPU.c
+"470 F:\GitHub\Switcher\CanToCan/Hardware/CPU.c
 [v _WriteRemoteSensor WriteRemoteSensor `(v  1 e 1 0 ]
 {
 "472
@@ -1173,7 +1173,7 @@ TXING 3
 [v WriteBreaker@Breaker Breaker `S47  1 p 102 0 ]
 "379
 } 0
-"63 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"63 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _CalCrc16 CalCrc16 `(ui  1 e 2 0 ]
 {
 "65
@@ -1183,7 +1183,7 @@ TXING 3
 [v CalCrc16@len len `uc  1 p 1 5 ]
 "70
 } 0
-"575 C:\Users\Administrator\Desktop\CanToCan/App/ProSwitch.c
+"575 F:\GitHub\Switcher\CanToCan/App/ProSwitch.c
 [v _SetWornValue SetWornValue `(v  1 e 1 0 ]
 {
 [v SetWornValue@Addr Addr `uc  1 a 1 wreg ]
@@ -1219,7 +1219,7 @@ TXING 3
 [v ConverToMFloat@dvalue dvalue `d  1 p 3 88 ]
 "204
 } 0
-"44 C:\Users\Administrator\Desktop\CanToCan/App/CanData.c
+"44 F:\GitHub\Switcher\CanToCan/App/CanData.c
 [v _SensorAtSwitcher SensorAtSwitcher `(uc  1 e 1 0 ]
 {
 [v SensorAtSwitcher@addr addr `uc  1 a 1 wreg ]
@@ -1233,16 +1233,16 @@ TXING 3
 {
 "23
 } 0
-"39 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"39 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _EarseBuf EarseBuf `(v  1 e 1 0 ]
 {
 [v EarseBuf@buf buf `*.39uc  1 p 2 0 ]
 [v EarseBuf@len len `ui  1 p 2 2 ]
 "47
 } 0
-"84 C:\Users\Administrator\Desktop\CanToCan/Header\Public.h
+"84 F:\GitHub\Switcher\CanToCan/Header\Public.h
 [s S38 . 14 `uc 1 Addr 1 0 `ui 1 UpDuanDian 2 1 `ui 1 UpFuDian 2 3 `ui 1 DownDuanDian 2 5 `ui 1 DownFuDian 2 7 `uc 1 CtrFlag 1 9 `ui 1 Tick 2 10 `ui 1 CurValue 2 12 ]
-"162 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"162 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _FilterRemoteSensor FilterRemoteSensor `(*.39S38  1 e 2 0 ]
 {
 [v FilterRemoteSensor@addr addr `uc  1 a 1 wreg ]
@@ -1289,7 +1289,7 @@ TXING 3
 [v IsSensorLinkWithBreaker@SensorAddr SensorAddr `uc  1 a 1 5 ]
 "133
 } 0
-"533 C:\Users\Administrator\Desktop\CanToCan/Hardware/CPU.c
+"533 F:\GitHub\Switcher\CanToCan/Hardware/CPU.c
 [v _EraseRemoteSensor EraseRemoteSensor `(v  1 e 1 0 ]
 {
 [v EraseRemoteSensor@Addr Addr `uc  1 a 1 wreg ]
@@ -1306,7 +1306,7 @@ TXING 3
 [v EraseRemoteSensor@Addr Addr `uc  1 a 1 27 ]
 "547
 } 0
-"181 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"181 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _GetRemoteSensorIndex GetRemoteSensorIndex `(uc  1 e 1 0 ]
 {
 [v GetRemoteSensorIndex@addr addr `uc  1 a 1 wreg ]
@@ -1318,7 +1318,7 @@ TXING 3
 [v GetRemoteSensorIndex@addr addr `uc  1 a 1 1 ]
 "190
 } 0
-"25 C:\Users\Administrator\Desktop\CanToCan/App/CanData.c
+"25 F:\GitHub\Switcher\CanToCan/App/CanData.c
 [v _CalCrcConfig CalCrcConfig `(ui  1 e 2 0 ]
 {
 "27
@@ -1329,7 +1329,7 @@ TXING 3
 [v CalCrcConfig@Sensor Sensor `S21  1 p 26 10 ]
 "42
 } 0
-"84 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"84 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _CalCrcInit CalCrcInit `(ui  1 e 2 0 ]
 {
 "86
@@ -1352,7 +1352,7 @@ TXING 3
 [v CRC16@value value `uc  1 a 1 0 ]
 "61
 } 0
-"183 C:\Users\Administrator\Desktop\CanToCan/App/CanData.c
+"183 F:\GitHub\Switcher\CanToCan/App/CanData.c
 [v _SwitchCtrInfoDeal SwitchCtrInfoDeal `(v  1 e 1 0 ]
 {
 [s S38 . 14 `uc 1 Addr 1 0 `ui 1 UpDuanDian 2 1 `ui 1 UpFuDian 2 3 `ui 1 DownDuanDian 2 5 `ui 1 DownFuDian 2 7 `uc 1 CtrFlag 1 9 `ui 1 Tick 2 10 `ui 1 CurValue 2 12 ]
@@ -1374,9 +1374,9 @@ TXING 3
 [v SwitchCtrInfoDeal@buf buf `*.30uc  1 p 1 16 ]
 "225
 } 0
-"84 C:\Users\Administrator\Desktop\CanToCan/Header\Public.h
+"84 F:\GitHub\Switcher\CanToCan/Header\Public.h
 [s S38 . 14 `uc 1 Addr 1 0 `ui 1 UpDuanDian 2 1 `ui 1 UpFuDian 2 3 `ui 1 DownDuanDian 2 5 `ui 1 DownFuDian 2 7 `uc 1 CtrFlag 1 9 `ui 1 Tick 2 10 `ui 1 CurValue 2 12 ]
-"151 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"151 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _GetRemoteSensor GetRemoteSensor `(*.39S38  1 e 2 0 ]
 {
 [v GetRemoteSensor@addr addr `uc  1 a 1 wreg ]
@@ -1388,7 +1388,7 @@ TXING 3
 [v GetRemoteSensor@addr addr `uc  1 a 1 9 ]
 "160
 } 0
-"284 C:\Users\Administrator\Desktop\CanToCan/Hardware/CPU.c
+"284 F:\GitHub\Switcher\CanToCan/Hardware/CPU.c
 [v _EraseLocalSenser EraseLocalSenser `(v  1 e 1 0 ]
 {
 [v EraseLocalSenser@Addr Addr `uc  1 a 1 wreg ]
@@ -1434,7 +1434,7 @@ TXING 3
 [v WriteBurstEEprom@len len `ui  1 p 2 10 ]
 "77
 } 0
-"135 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"135 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _GetBreakerIndex GetBreakerIndex `(uc  1 e 1 0 ]
 {
 [v GetBreakerIndex@addr addr `uc  1 a 1 wreg ]
@@ -1446,7 +1446,7 @@ TXING 3
 [v GetBreakerIndex@addr addr `uc  1 a 1 1 ]
 "144
 } 0
-"227 C:\Users\Administrator\Desktop\CanToCan/App/CanData.c
+"227 F:\GitHub\Switcher\CanToCan/App/CanData.c
 [v _Break3_0InfoDeal Break3_0InfoDeal `(v  1 e 1 0 ]
 {
 [v Break3_0InfoDeal@buf buf `*.30uc  1 a 1 wreg ]
@@ -1473,7 +1473,7 @@ TXING 3
 [v CanDownReceiveFunc@flag flag `uc  1 a 1 75 ]
 "661
 } 0
-"248 C:\Users\Administrator\Desktop\CanToCan/Hardware/Can.c
+"248 F:\GitHub\Switcher\CanToCan/Hardware/Can.c
 [v _ReadBurstRegCan ReadBurstRegCan `(v  1 e 1 0 ]
 {
 [v ReadBurstRegCan@addr addr `uc  1 a 1 wreg ]
@@ -1487,7 +1487,7 @@ TXING 3
 [v ReadBurstRegCan@addr addr `uc  1 a 1 3 ]
 "257
 } 0
-"271 C:\Users\Administrator\Desktop\CanToCan/App/ProSwitch.c
+"271 F:\GitHub\Switcher\CanToCan/App/ProSwitch.c
 [v _CanProSwitch CanProSwitch `(v  1 e 1 0 ]
 {
 [s S519 . 14 `E17975 1 Status 1 0 `[8]uc 1 Buf 8 1 `uc 1 Len 1 9 `ul 1 ID 4 10 ]
@@ -1515,12 +1515,12 @@ TXING 3
 [v CanProSwitch@Can_Peking Can_Peking `S519  1 p 14 18 ]
 "559
 } 0
-"317 C:\Users\Administrator\Desktop\CanToCan/Hardware/CPU.c
+"317 F:\GitHub\Switcher\CanToCan/Hardware/CPU.c
 [v _TimeChange TimeChange `(v  1 e 1 0 ]
 {
 "330
 } 0
-"775 C:\Users\Administrator\Desktop\CanToCan/App/ProSwitch.c
+"775 F:\GitHub\Switcher\CanToCan/App/ProSwitch.c
 [v _PowerDataDeal PowerDataDeal `(v  1 e 1 0 ]
 {
 "777
@@ -1530,7 +1530,7 @@ TXING 3
 [v PowerDataDeal@PowerDataCan PowerDataCan `S519  1 p 14 6 ]
 "780
 } 0
-"29 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"29 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _BufCopy BufCopy `(v  1 e 1 0 ]
 {
 [v BufCopy@s s `*.39uc  1 p 2 0 ]
@@ -1538,7 +1538,7 @@ TXING 3
 [v BufCopy@len len `ui  1 p 2 4 ]
 "37
 } 0
-"238 C:\Users\Administrator\Desktop\CanToCan/App/ProSwitch.c
+"238 F:\GitHub\Switcher\CanToCan/App/ProSwitch.c
 [v _MakeUpLoadData MakeUpLoadData `(ui  1 e 2 0 ]
 {
 [v MakeUpLoadData@PointNum PointNum `uc  1 a 1 wreg ]
@@ -1575,7 +1575,7 @@ TXING 3
 [v MakeFeimoCanId@FramCnt FramCnt `uc  1 a 1 5 ]
 "74
 } 0
-"223 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"223 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _GetChuShu GetChuShu `(ui  1 e 2 0 ]
 {
 [v GetChuShu@flag flag `uc  1 a 1 wreg ]
@@ -1588,9 +1588,9 @@ TXING 3
 [v GetChuShu@flag flag `uc  1 a 1 10 ]
 "227
 } 0
-"101 C:\Users\Administrator\Desktop\CanToCan/Header\Public.h
+"101 F:\GitHub\Switcher\CanToCan/Header\Public.h
 [s S47 . 102 `uc 1 Addr 1 0 `uc 1 Crc 1 1 `uc 1 ForceControlFlag 1 2 `uc 1 ForceControlPort 1 3 `uc 1 CrossControlFlag 1 4 `uc 1 CrossControlPort 1 5 `[15]uc 1 LocalTriggers 15 6 `[15]uc 1 LocalTriggerAddrs 15 21 `[24]uc 1 RemoteTriggers 24 36 `[24]uc 1 RemoteTriggerAddrs 24 60 `uc 1 RelevanceLocalSensorCnt 1 84 `uc 1 RelevanceRemoteSensorCnt 1 85 `[4]uc 1 Break3_0Addrs 4 86 `uc 1 Break3_0Cnt 1 90 `ui 1 Tick 2 91 `ui 1 UpLoadTick 2 93 `uc 1 ActCnt 1 95 `uc 1 Flag 1 96 `uc 1 TriggerAddr 1 97 `ui 1 ActTick 2 98 `ui 1 CurValue 2 100 ]
-"106 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"106 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _FilterBreaker FilterBreaker `(*.39S47  1 e 2 0 ]
 {
 [v FilterBreaker@addr addr `uc  1 a 1 wreg ]
@@ -1604,9 +1604,9 @@ TXING 3
 [v FilterBreaker@addr addr `uc  1 a 1 17 ]
 "122
 } 0
-"101 C:\Users\Administrator\Desktop\CanToCan/Header\Public.h
+"101 F:\GitHub\Switcher\CanToCan/Header\Public.h
 [s S47 . 102 `uc 1 Addr 1 0 `uc 1 Crc 1 1 `uc 1 ForceControlFlag 1 2 `uc 1 ForceControlPort 1 3 `uc 1 CrossControlFlag 1 4 `uc 1 CrossControlPort 1 5 `[15]uc 1 LocalTriggers 15 6 `[15]uc 1 LocalTriggerAddrs 15 21 `[24]uc 1 RemoteTriggers 24 36 `[24]uc 1 RemoteTriggerAddrs 24 60 `uc 1 RelevanceLocalSensorCnt 1 84 `uc 1 RelevanceRemoteSensorCnt 1 85 `[4]uc 1 Break3_0Addrs 4 86 `uc 1 Break3_0Cnt 1 90 `ui 1 Tick 2 91 `ui 1 UpLoadTick 2 93 `uc 1 ActCnt 1 95 `uc 1 Flag 1 96 `uc 1 TriggerAddr 1 97 `ui 1 ActTick 2 98 `ui 1 CurValue 2 100 ]
-"95 C:\Users\Administrator\Desktop\CanToCan/App/Public.c
+"95 F:\GitHub\Switcher\CanToCan/App/Public.c
 [v _GetBreaker GetBreaker `(*.39S47  1 e 2 0 ]
 {
 [v GetBreaker@addr addr `uc  1 a 1 wreg ]
@@ -1618,7 +1618,7 @@ TXING 3
 [v GetBreaker@addr addr `uc  1 a 1 9 ]
 "104
 } 0
-"117 C:\Users\Administrator\Desktop\CanToCan/App/ProSwitch.c
+"117 F:\GitHub\Switcher\CanToCan/App/ProSwitch.c
 [v _ConverToByeFloat ConverToByeFloat `(d  1 e 3 0 ]
 {
 [v ConverToByeFloat@tran tran `*.30uc  1 a 1 wreg ]
@@ -1834,7 +1834,7 @@ TXING 3
 [v ___ftpack@sign sign `uc  1 p 1 4 ]
 "86
 } 0
-"114 C:\Users\Administrator\Desktop\CanToCan/Hardware/Can.c
+"114 F:\GitHub\Switcher\CanToCan/Hardware/Can.c
 [v _CanUpSend CanUpSend `(v  1 e 1 0 ]
 {
 "116
@@ -1851,7 +1851,7 @@ TXING 3
 {
 "112
 } 0
-"251 C:\Users\Administrator\Desktop\CanToCan/App/ProSwitch.c
+"251 F:\GitHub\Switcher\CanToCan/App/ProSwitch.c
 [v _CanIdSwitch CanIdSwitch `(ul  1 e 4 0 ]
 {
 "253
@@ -1916,7 +1916,7 @@ TXING 3
 [v MakePekingCanId@Priority Priority `uc  1 a 1 16 ]
 "57
 } 0
-"180 C:\Users\Administrator\Desktop\CanToCan/Hardware/Can.c
+"180 F:\GitHub\Switcher\CanToCan/Hardware/Can.c
 [v _CanDownSend CanDownSend `(v  1 e 1 0 ]
 {
 "182
@@ -1990,7 +1990,7 @@ TXING 3
 [v SendByte@dat dat `uc  1 a 1 0 ]
 "208
 } 0
-"190 C:\Users\Administrator\Desktop\CanToCan/Hardware/CPU.c
+"190 F:\GitHub\Switcher\CanToCan/Hardware/CPU.c
 [v _SystemISR SystemISR `II(v  1 s 1 SystemISR ]
 {
 "208

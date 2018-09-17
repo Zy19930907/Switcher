@@ -17200,18 +17200,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 225: break;
 "225
 [e $U 2590  ]
-[; ;main.c: 242: default:
-"242
+[; ;main.c: 241: default:
+"241
 [e :U 2620 ]
-[; ;main.c: 243: CurRunLevel = LedRunLevel;
-"243
+[; ;main.c: 242: CurRunLevel = LedRunLevel;
+"242
 [e = _CurRunLevel . `E17915 0 ]
-[; ;main.c: 244: break;
-"244
+[; ;main.c: 243: break;
+"243
 [e $U 2590  ]
-"245
+"244
 }
-[; ;main.c: 245: }
+[; ;main.c: 244: }
 [e $U 2590  ]
 "119
 [e :U 2591 ]
@@ -17226,15 +17226,15 @@ Version 3.2 HI-TECH Software Intermediate Code
  , $ . `E17915 8 2613
  , $ . `E17915 9 2615
  2620 ]
-"245
+"244
 [e :U 2590 ]
-"246
+"245
 }
-[; ;main.c: 246: }
+[; ;main.c: 245: }
 [e $U 2587  ]
 [e :U 2588 ]
 }
-[; ;main.c: 247: }
-"247
+[; ;main.c: 246: }
+"246
 [e :UE 2586 ]
 }
