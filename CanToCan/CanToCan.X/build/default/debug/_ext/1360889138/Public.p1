@@ -1,0 +1,1048 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"63 ../Header\Public.h
+[s S1 `uc 1 `uc 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `uc 1 `uc 1 `uc 1 `uc 1 `ui 1 `ui 1 `ui 1 `ui 1 ]
+[n S1 . Crc SensorFlag UpWarn UpDuanDian UpFuDian DownWarn DownDuanDian DownFuDian Addr Name CtrFlag Delay OffTimeout CurValue Tick UpLoadTick ]
+"84
+[s S2 `uc 1 `ui 1 `ui 1 `ui 1 `ui 1 `uc 1 `ui 1 `ui 1 ]
+[n S2 . Addr UpDuanDian UpFuDian DownDuanDian DownFuDian CtrFlag Tick CurValue ]
+"101
+[s S3 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc -> 15 `i `uc -> 15 `i `uc -> 24 `i `uc -> 24 `i `uc 1 `uc 1 `uc -> 4 `i `uc 1 `ui 1 `ui 1 `uc 1 `uc 1 `uc 1 `ui 1 `ui 1 ]
+[n S3 . Addr Crc ForceControlFlag ForceControlPort CrossControlFlag CrossControlPort LocalTriggers LocalTriggerAddrs RemoteTriggers RemoteTriggerAddrs RelevanceLocalSensorCnt RelevanceRemoteSensorCnt Break3_0Addrs Break3_0Cnt Tick UpLoadTick ActCnt Flag TriggerAddr ActTick CurValue ]
+"10 ../App/Public.c
+[v _SYS_TICK `Vui ~T0 @X0 0 e ]
+[v _SYS_TICK_1S `Vui ~T0 @X0 0 e ]
+"39 ../Header\CPU.h
+[v _EraseRemoteSensor `(v ~T0 @X0 0 ef1`uc ]
+[; ;Header\Public.h: 12: typedef unsigned char u8;
+[; ;Header\Public.h: 13: typedef unsigned int u16;
+[; ;Header\Public.h: 14: typedef unsigned long u32;
+[; ;Header\Public.h: 15: typedef volatile unsigned char vu8;
+[; ;Header\Public.h: 16: typedef volatile unsigned int vu16;
+[; ;Header\Public.h: 63: typedef struct {
+[; ;Header\Public.h: 64: u8 Crc;
+[; ;Header\Public.h: 65: u8 SensorFlag;
+[; ;Header\Public.h: 66: u16 UpWarn;
+[; ;Header\Public.h: 67: u16 UpDuanDian;
+[; ;Header\Public.h: 68: u16 UpFuDian;
+[; ;Header\Public.h: 69: u16 DownWarn;
+[; ;Header\Public.h: 70: u16 DownDuanDian;
+[; ;Header\Public.h: 71: u16 DownFuDian;
+[; ;Header\Public.h: 73: u8 Addr;
+[; ;Header\Public.h: 74: u8 Name;
+[; ;Header\Public.h: 75: u8 CtrFlag;
+[; ;Header\Public.h: 76: u8 Delay;
+[; ;Header\Public.h: 78: u16 OffTimeout;
+[; ;Header\Public.h: 79: u16 CurValue;
+[; ;Header\Public.h: 80: u16 Tick;
+[; ;Header\Public.h: 81: u16 UpLoadTick;
+[; ;Header\Public.h: 82: } _LocalSensor;
+[; ;Header\Public.h: 84: typedef struct {
+[; ;Header\Public.h: 85: u8 Addr;
+[; ;Header\Public.h: 86: u16 UpDuanDian;
+[; ;Header\Public.h: 87: u16 UpFuDian;
+[; ;Header\Public.h: 88: u16 DownDuanDian;
+[; ;Header\Public.h: 89: u16 DownFuDian;
+[; ;Header\Public.h: 91: u8 CtrFlag;
+[; ;Header\Public.h: 92: u16 Tick;
+[; ;Header\Public.h: 93: u16 CurValue;
+[; ;Header\Public.h: 94: } _RemoteSensor;
+[; ;Header\Public.h: 101: typedef struct {
+[; ;Header\Public.h: 102: u8 Addr;
+[; ;Header\Public.h: 103: u8 Crc;
+[; ;Header\Public.h: 104: u8 ForceControlFlag;
+[; ;Header\Public.h: 105: u8 ForceControlPort;
+[; ;Header\Public.h: 106: u8 CrossControlFlag;
+[; ;Header\Public.h: 107: u8 CrossControlPort;
+[; ;Header\Public.h: 109: u8 LocalTriggers[15];
+[; ;Header\Public.h: 110: u8 LocalTriggerAddrs[15];
+[; ;Header\Public.h: 112: u8 RemoteTriggers[24];
+[; ;Header\Public.h: 113: u8 RemoteTriggerAddrs[24];
+[; ;Header\Public.h: 115: u8 RelevanceLocalSensorCnt;
+[; ;Header\Public.h: 116: u8 RelevanceRemoteSensorCnt;
+[; ;Header\Public.h: 118: u8 Break3_0Addrs[4];
+[; ;Header\Public.h: 119: u8 Break3_0Cnt;
+[; ;Header\Public.h: 120: u16 Tick;
+[; ;Header\Public.h: 121: u16 UpLoadTick;
+[; ;Header\Public.h: 122: u8 ActCnt;
+[; ;Header\Public.h: 123: u8 Flag;
+[; ;Header\Public.h: 125: u8 TriggerAddr;
+[; ;Header\Public.h: 126: u16 ActTick;
+[; ;Header\Public.h: 127: u16 CurValue;
+[; ;Header\Public.h: 128: } _Breaker;
+[; ;Header\Public.h: 134: typedef struct {
+[; ;Header\Public.h: 135: u8 Addr;
+[; ;Header\Public.h: 136: u8 AddrOffset;
+[; ;Header\Public.h: 137: u8 Delay;
+[; ;Header\Public.h: 138: u8 Vol;
+[; ;Header\Public.h: 139: u8 UploadCnt;
+[; ;Header\Public.h: 140: u8 CrcSendCnt;
+[; ;Header\Public.h: 141: u8 InitDelay;
+[; ;Header\Public.h: 142: u8 UploadFlag;
+[; ;Header\Public.h: 143: u8 Get3_0;
+[; ;Header\Public.h: 145: u16 OfflineLianDongFlag;
+[; ;Header\Public.h: 146: u16 TriggerLianDongFlag;
+[; ;Header\Public.h: 147: u16 UpLoadTime;
+[; ;Header\Public.h: 148: u16 OnlineFlag;
+[; ;Header\Public.h: 149: } CSys;
+[; ;Header\Public.h: 151: typedef enum {
+[; ;Header\Public.h: 152: LedRunLevel,
+[; ;Header\Public.h: 153: VoltageSample,
+[; ;Header\Public.h: 154: CanUpLevel,
+[; ;Header\Public.h: 155: CanDownLevel,
+[; ;Header\Public.h: 156: SyncClkLevel,
+[; ;Header\Public.h: 157: OnlineCheckLevel,
+[; ;Header\Public.h: 158: CheckDuandianLevel,
+[; ;Header\Public.h: 159: TimeLevel,
+[; ;Header\Public.h: 160: PowerUploadLevel,
+[; ;Header\Public.h: 161: UploadSwitcherInfo,
+[; ;Header\Public.h: 163: } CRunLevel;
+[; ;Header\Public.h: 165: u16 MsTickDiff(u16 tick);
+[; ;Header\Public.h: 166: u16 SecTickDiff(u16 tick);
+[; ;Header\Public.h: 167: u8 CRC16Check(u8 *buf, u8 len);
+[; ;Header\Public.h: 168: void CRC16(u8 value);
+[; ;Header\Public.h: 169: void delay_us(u16 time);
+[; ;Header\Public.h: 170: u16 CalCrc16(u8 *buf, u8 len);
+[; ;Header\Public.h: 171: u16 Us100TickDiff(u16 tick);
+[; ;Header\Public.h: 172: u16 SecTickDiff(u16 tick);
+[; ;Header\Public.h: 173: void EarseBuf(u8 *buf, u16 len);
+[; ;Header\Public.h: 174: void BufCopy(u8 *s, u8 *d, u16 len);
+[; ;Header\Public.h: 175: u16 CalCrcInit(u8 *buf, u16 len, u8 flag);
+[; ;Header\Public.h: 177: _Breaker* GetBreaker(u8 addr);
+[; ;Header\Public.h: 178: _Breaker* FilterBreaker(u8 addr);
+[; ;Header\Public.h: 179: _Breaker* GetBreakerByIndex(u8 index);
+[; ;Header\Public.h: 180: u8 GetBreakerIndex(u8 addr);
+[; ;Header\Public.h: 183: _RemoteSensor* FilterRemoteSensor(u8 addr);
+[; ;Header\Public.h: 185: u8 GetRemoteSensorIndex(u8 addr);
+[; ;Header\Public.h: 186: _RemoteSensor* GetRemoteSensorByIndex(u8 index);
+[; ;Header\Public.h: 187: _RemoteSensor* GetRemoteSensor(u8 addr);
+[; ;Header\Public.h: 189: void CheckRemoteSensor(void);
+[; ;Header\Public.h: 191: u16 GetChuShu(u8 flag);
+[; ;Header\CPU.h: 13: typedef struct
+[; ;Header\CPU.h: 14: {
+[; ;Header\CPU.h: 15: u8 Buf[7];
+[; ;Header\CPU.h: 16: u8 HexTime[7];
+[; ;Header\CPU.h: 17: }CTime;
+[; ;Header\CPU.h: 19: void CpuInit(void);
+[; ;Header\CPU.h: 20: void Timer0Init(void);
+[; ;Header\CPU.h: 21: void Timer2Init(void);
+[; ;Header\CPU.h: 22: void VolSample(void);
+[; ;Header\CPU.h: 23: void ReadConfig(void);
+[; ;Header\CPU.h: 24: void ReadAddr(void);
+[; ;Header\CPU.h: 25: void IoInit(void);
+[; ;Header\CPU.h: 26: void AdInit(void);
+[; ;Header\CPU.h: 27: u16 GetVolInputValue(u8 ch);
+[; ;Header\CPU.h: 28: void VolSample(void);
+[; ;Header\CPU.h: 32: void WriteLocalSenserConfig(_LocalSensor Sensor);
+[; ;Header\CPU.h: 33: void ReadAllLocalSensorConfig(void);
+[; ;Header\CPU.h: 34: void EraseLocalSenser(u8 Addr);
+[; ;Header\CPU.h: 36: void ReadAllRemoteSensor(void);
+[; ;Header\CPU.h: 37: void ReadRemoteSensor(u8 Index);
+[; ;Header\CPU.h: 38: void WriteRemoteSensor(_RemoteSensor* RemoteSensor);
+[; ;Header\CPU.h: 39: void EraseRemoteSensor(u8 Addr);
+[; ;Header\CPU.h: 41: void WriteBreaker(_Breaker Breaker);
+[; ;Header\CPU.h: 42: void EraseBreaker(u8 Addr);
+[; ;Header\CPU.h: 43: void ReadAllBreaker(void);
+[; ;Header\CPU.h: 44: void TimePro(void);
+[; ;Header\CPU.h: 45: void TimeChange(void);
+[; ;Header\CPU.h: 47: void WriteBurstEEprom(u16 addr,u8 *buf,u16 len);
+[; ;Header\CPU.h: 48: void ReadBurstEEprom(u16 addr,u8 *buf,u16 len);
+"5 ../App/Public.c
+[v _LocalSensors `S1 ~T0 @X0 -> 16 `i e ]
+[; ;Public.c: 5: _LocalSensor LocalSensors[16];
+"6
+[v _RemoteSensors `S2 ~T0 @X0 -> 24 `i e ]
+[; ;Public.c: 6: _RemoteSensor RemoteSensors[24];
+"7
+[v _Breakers `S3 ~T0 @X0 -> 5 `i e ]
+[; ;Public.c: 7: _Breaker Breakers[5];
+"8
+[v _NullBreaker `S3 ~T0 @X0 1 e ]
+[v _NoBreaker `S3 ~T0 @X0 1 e ]
+[; ;Public.c: 8: _Breaker NullBreaker, NoBreaker;
+"9
+[v _NullRemoteSensor `S2 ~T0 @X0 1 e ]
+[v _NoRemoteSensor `S2 ~T0 @X0 1 e ]
+[; ;Public.c: 9: _RemoteSensor NullRemoteSensor, NoRemoteSensor;
+[; ;Public.c: 10: extern vu16 SYS_TICK, SYS_TICK_1S;
+"11
+[v _Crc16 `ui ~T0 @X0 1 e ]
+[; ;Public.c: 11: u16 Crc16;
+"13
+[v _MsTickDiff `(ui ~T0 @X0 1 ef1`ui ]
+"14
+{
+[; ;Public.c: 13: u16 MsTickDiff(u16 tick)
+[; ;Public.c: 14: {
+[e :U _MsTickDiff ]
+"13
+[v _tick `ui ~T0 @X0 1 r1 ]
+"14
+[f ]
+[; ;Public.c: 15: if (SYS_TICK >= tick)
+"15
+[e $ ! >= _SYS_TICK _tick 7  ]
+[; ;Public.c: 16: return SYS_TICK - tick;
+"16
+[e ) - _SYS_TICK _tick ]
+[e $UE 6  ]
+[e $U 8  ]
+"17
+[e :U 7 ]
+[; ;Public.c: 17: else
+[; ;Public.c: 18: return 0xffff - tick + SYS_TICK;
+"18
+[e ) + - -> 65535 `ui _tick _SYS_TICK ]
+[e $UE 6  ]
+[e :U 8 ]
+[; ;Public.c: 19: }
+"19
+[e :UE 6 ]
+}
+"21
+[v _SecTickDiff `(ui ~T0 @X0 1 ef1`ui ]
+"22
+{
+[; ;Public.c: 21: u16 SecTickDiff(u16 tick)
+[; ;Public.c: 22: {
+[e :U _SecTickDiff ]
+"21
+[v _tick `ui ~T0 @X0 1 r1 ]
+"22
+[f ]
+[; ;Public.c: 23: if (SYS_TICK_1S >= tick)
+"23
+[e $ ! >= _SYS_TICK_1S _tick 10  ]
+[; ;Public.c: 24: return SYS_TICK_1S - tick;
+"24
+[e ) - _SYS_TICK_1S _tick ]
+[e $UE 9  ]
+[e $U 11  ]
+"25
+[e :U 10 ]
+[; ;Public.c: 25: else
+[; ;Public.c: 26: return 0xffff - tick + SYS_TICK_1S;
+"26
+[e ) + - -> 65535 `ui _tick _SYS_TICK_1S ]
+[e $UE 9  ]
+[e :U 11 ]
+[; ;Public.c: 27: }
+"27
+[e :UE 9 ]
+}
+"29
+[v _BufCopy `(v ~T0 @X0 1 ef3`*uc`*uc`ui ]
+"30
+{
+[; ;Public.c: 29: void BufCopy(u8 *s, u8 *d, u16 len)
+[; ;Public.c: 30: {
+[e :U _BufCopy ]
+"29
+[v _s `*uc ~T0 @X0 1 r1 ]
+[v _d `*uc ~T0 @X0 1 r2 ]
+[v _len `ui ~T0 @X0 1 r3 ]
+"30
+[f ]
+[; ;Public.c: 31: if (len <= 0)
+"31
+[e $ ! <= _len -> -> 0 `i `ui 13  ]
+[; ;Public.c: 32: return;
+"32
+[e $UE 12  ]
+[e :U 13 ]
+[; ;Public.c: 33: do
+"33
+[e :U 16 ]
+[; ;Public.c: 34: {
+"34
+{
+[; ;Public.c: 35: *s++ = *d++;
+"35
+[e = *U ++ _s * -> -> 1 `i `x -> -> # *U _s `i `x *U ++ _d * -> -> 1 `i `x -> -> # *U _d `i `x ]
+"36
+}
+[; ;Public.c: 36: } while (--len);
+[e $ != =- _len -> -> 1 `i `ui -> -> 0 `i `ui 16  ]
+[e :U 15 ]
+[; ;Public.c: 37: }
+"37
+[e :UE 12 ]
+}
+"39
+[v _EarseBuf `(v ~T0 @X0 1 ef2`*uc`ui ]
+"40
+{
+[; ;Public.c: 39: void EarseBuf(u8 *buf, u16 len)
+[; ;Public.c: 40: {
+[e :U _EarseBuf ]
+"39
+[v _buf `*uc ~T0 @X0 1 r1 ]
+[v _len `ui ~T0 @X0 1 r2 ]
+"40
+[f ]
+[; ;Public.c: 41: if (len <= 0)
+"41
+[e $ ! <= _len -> -> 0 `i `ui 18  ]
+[; ;Public.c: 42: return;
+"42
+[e $UE 17  ]
+[e :U 18 ]
+[; ;Public.c: 43: do
+"43
+[e :U 21 ]
+[; ;Public.c: 44: {
+"44
+{
+[; ;Public.c: 45: *(buf++) = '\0';
+"45
+[e = *U ++ _buf * -> -> 1 `i `x -> -> # *U _buf `i `x -> -> 0 `ui `uc ]
+"46
+}
+[; ;Public.c: 46: } while (--len);
+[e $ != =- _len -> -> 1 `i `ui -> -> 0 `i `ui 21  ]
+[e :U 20 ]
+[; ;Public.c: 47: }
+"47
+[e :UE 17 ]
+}
+"49
+[v _CRC16 `(v ~T0 @X0 1 ef1`uc ]
+"50
+{
+[; ;Public.c: 49: void CRC16(u8 value)
+[; ;Public.c: 50: {
+[e :U _CRC16 ]
+"49
+[v _value `uc ~T0 @X0 1 r1 ]
+"50
+[f ]
+"51
+[v _i `uc ~T0 @X0 1 a ]
+[v _temp `uc ~T0 @X0 1 a ]
+[; ;Public.c: 51: unsigned char i, temp = 0;
+[e = _temp -> -> 0 `i `uc ]
+[; ;Public.c: 52: Crc16 ^= value;
+"52
+[e =^ _Crc16 -> _value `ui ]
+[; ;Public.c: 53: for (i = 0; i < 8; i++)
+"53
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 8 `i 23  ]
+[e $U 24  ]
+"54
+[e :U 23 ]
+[; ;Public.c: 54: {
+{
+[; ;Public.c: 55: temp = (Crc16 & 0x0001);
+"55
+[e = _temp -> & _Crc16 -> -> 1 `i `ui `uc ]
+[; ;Public.c: 56: Crc16 >>= 1;
+"56
+[e =>> _Crc16 -> 1 `i ]
+[; ;Public.c: 57: Crc16 &= 0x7fff;
+"57
+[e =& _Crc16 -> -> 32767 `i `ui ]
+[; ;Public.c: 58: if (temp)
+"58
+[e $ ! != -> _temp `i -> -> -> 0 `i `uc `i 26  ]
+[; ;Public.c: 59: Crc16 ^= 0xA001;
+"59
+[e =^ _Crc16 -> 40961 `ui ]
+[e :U 26 ]
+"60
+}
+"53
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 8 `i 23  ]
+[e :U 24 ]
+"60
+}
+[; ;Public.c: 60: }
+[; ;Public.c: 61: }
+"61
+[e :UE 22 ]
+}
+"63
+[v _CalCrc16 `(ui ~T0 @X0 1 ef2`*uc`uc ]
+"64
+{
+[; ;Public.c: 63: u16 CalCrc16(u8 *buf, u8 len)
+[; ;Public.c: 64: {
+[e :U _CalCrc16 ]
+"63
+[v _buf `*uc ~T0 @X0 1 r1 ]
+[v _len `uc ~T0 @X0 1 r2 ]
+"64
+[f ]
+"65
+[v _i `uc ~T0 @X0 1 a ]
+[; ;Public.c: 65: u8 i;
+[; ;Public.c: 66: Crc16 = 0xffff;
+"66
+[e = _Crc16 -> 65535 `ui ]
+[; ;Public.c: 67: for (i = 0; i < len; i++)
+"67
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 31  ]
+"68
+[e :U 28 ]
+[; ;Public.c: 68: CRC16(buf[i]);
+[e ( _CRC16 (1 *U + _buf * -> _i `ux -> -> # *U _buf `ui `ux ]
+"67
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 31 ]
+[e $ < -> _i `i -> _len `i 28  ]
+[e :U 29 ]
+"68
+}
+[; ;Public.c: 69: return Crc16;
+"69
+[e ) _Crc16 ]
+[e $UE 27  ]
+[; ;Public.c: 70: }
+"70
+[e :UE 27 ]
+}
+"72
+[v _CRC16Check `(uc ~T0 @X0 1 ef2`*uc`uc ]
+"73
+{
+[; ;Public.c: 72: u8 CRC16Check(u8 *buf, u8 len)
+[; ;Public.c: 73: {
+[e :U _CRC16Check ]
+"72
+[v _buf `*uc ~T0 @X0 1 r1 ]
+[v _len `uc ~T0 @X0 1 r2 ]
+"73
+[f ]
+[; ;Public.c: 74: Crc16 = 0xffff;
+"74
+[e = _Crc16 -> 65535 `ui ]
+[; ;Public.c: 75: CalCrc16(buf, len - 2);
+"75
+[e ( _CalCrc16 (2 , _buf -> - -> _len `i -> 2 `i `uc ]
+[; ;Public.c: 76: if (((Crc16 & 0x00ff) == buf[len - 2]) && ((Crc16 >> 8) == buf[len - 1]))
+"76
+[e $ ! && == & _Crc16 -> -> 255 `i `ui -> *U + _buf * -> - -> _len `i -> 2 `i `x -> -> # *U _buf `i `x `ui == >> _Crc16 -> 8 `i -> *U + _buf * -> - -> _len `i -> 1 `i `x -> -> # *U _buf `i `x `ui 33  ]
+[; ;Public.c: 77: return 0x01;
+"77
+[e ) -> -> 1 `i `uc ]
+[e $UE 32  ]
+[e $U 34  ]
+"78
+[e :U 33 ]
+[; ;Public.c: 78: else
+[; ;Public.c: 79: return 0x00;
+"79
+[e ) -> -> 0 `i `uc ]
+[e $UE 32  ]
+[e :U 34 ]
+[; ;Public.c: 80: }
+"80
+[e :UE 32 ]
+}
+"84
+[v _CalCrcInit `(ui ~T0 @X0 1 ef3`*uc`ui`uc ]
+"85
+{
+[; ;Public.c: 84: u16 CalCrcInit(u8 *buf, u16 len, u8 flag)
+[; ;Public.c: 85: {
+[e :U _CalCrcInit ]
+"84
+[v _buf `*uc ~T0 @X0 1 r1 ]
+[v _len `ui ~T0 @X0 1 r2 ]
+[v _flag `uc ~T0 @X0 1 r3 ]
+"85
+[f ]
+"86
+[v _i `ui ~T0 @X0 1 a ]
+[; ;Public.c: 86: u16 i;
+[; ;Public.c: 87: Crc16 = 0xffff;
+"87
+[e = _Crc16 -> 65535 `ui ]
+[; ;Public.c: 88: for (i = 0; i < len; i++)
+"88
+{
+[e = _i -> -> 0 `i `ui ]
+[e $U 39  ]
+"89
+[e :U 36 ]
+[; ;Public.c: 89: CRC16(buf[i]);
+[e ( _CRC16 (1 *U + _buf * -> _i `ux -> -> # *U _buf `ui `ux ]
+"88
+[e ++ _i -> -> 1 `i `ui ]
+[e :U 39 ]
+[e $ < _i _len 36  ]
+[e :U 37 ]
+"89
+}
+[; ;Public.c: 90: if (flag)
+"90
+[e $ ! != -> _flag `i -> -> -> 0 `i `uc `i 40  ]
+[; ;Public.c: 91: Crc16 += (Crc16 >> 8);
+"91
+[e =+ _Crc16 >> _Crc16 -> 8 `i ]
+[e :U 40 ]
+[; ;Public.c: 92: return Crc16;
+"92
+[e ) _Crc16 ]
+[e $UE 35  ]
+[; ;Public.c: 93: }
+"93
+[e :UE 35 ]
+}
+"95
+[v _GetBreaker `(*S3 ~T0 @X0 1 ef1`uc ]
+"96
+{
+[; ;Public.c: 95: _Breaker* GetBreaker(u8 addr)
+[; ;Public.c: 96: {
+[e :U _GetBreaker ]
+"95
+[v _addr `uc ~T0 @X0 1 r1 ]
+"96
+[f ]
+"97
+[v _i `i ~T0 @X0 1 a ]
+[; ;Public.c: 97: int i;
+[; ;Public.c: 98: for (i = 0; i < 5; i++)
+"98
+{
+[e = _i -> 0 `i ]
+[e $ < _i -> 5 `i 42  ]
+[e $U 43  ]
+"99
+[e :U 42 ]
+[; ;Public.c: 99: {
+{
+[; ;Public.c: 100: if (Breakers[i].Addr == addr)
+"100
+[e $ ! == -> . *U + &U _Breakers * -> -> _i `ui `ux -> -> # *U &U _Breakers `ui `ux 0 `i -> _addr `i 45  ]
+[; ;Public.c: 101: return(&Breakers[i]);
+"101
+[e ) &U *U + &U _Breakers * -> -> _i `ui `ux -> -> # *U &U _Breakers `ui `ux ]
+[e $UE 41  ]
+[e :U 45 ]
+"102
+}
+"98
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 5 `i 42  ]
+[e :U 43 ]
+"102
+}
+[; ;Public.c: 102: }
+[; ;Public.c: 103: return &NullBreaker;
+"103
+[e ) &U _NullBreaker ]
+[e $UE 41  ]
+[; ;Public.c: 104: }
+"104
+[e :UE 41 ]
+}
+"106
+[v _FilterBreaker `(*S3 ~T0 @X0 1 ef1`uc ]
+"107
+{
+[; ;Public.c: 106: _Breaker* FilterBreaker(u8 addr)
+[; ;Public.c: 107: {
+[e :U _FilterBreaker ]
+"106
+[v _addr `uc ~T0 @X0 1 r1 ]
+"107
+[f ]
+"108
+[v _i `uc ~T0 @X0 1 a ]
+"109
+[v _Breaker `*S3 ~T0 @X0 1 a ]
+[; ;Public.c: 108: u8 i;
+[; ;Public.c: 109: _Breaker* Breaker = GetBreaker(addr);
+[e = _Breaker ( _GetBreaker (1 _addr ]
+[; ;Public.c: 110: if (Breaker->Addr == addr)
+"110
+[e $ ! == -> . *U _Breaker 0 `i -> _addr `i 47  ]
+[; ;Public.c: 111: return GetBreaker(addr);
+"111
+[e ) ( _GetBreaker (1 _addr ]
+[e $UE 46  ]
+[e :U 47 ]
+[; ;Public.c: 112: if (Breaker->Addr == 0)
+"112
+[e $ ! == -> . *U _Breaker 0 `i -> 0 `i 48  ]
+[; ;Public.c: 113: {
+"113
+{
+[; ;Public.c: 114: for (i = 0; i < 5; i++)
+"114
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 5 `i 49  ]
+[e $U 50  ]
+"115
+[e :U 49 ]
+[; ;Public.c: 115: {
+{
+[; ;Public.c: 116: if (Breakers[i].Addr == 0)
+"116
+[e $ ! == -> . *U + &U _Breakers * -> _i `ux -> -> # *U &U _Breakers `ui `ux 0 `i -> 0 `i 52  ]
+[; ;Public.c: 117: return(&Breakers[i]);
+"117
+[e ) &U *U + &U _Breakers * -> _i `ux -> -> # *U &U _Breakers `ui `ux ]
+[e $UE 46  ]
+[e :U 52 ]
+"118
+}
+"114
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 5 `i 49  ]
+[e :U 50 ]
+"118
+}
+"119
+}
+[e :U 48 ]
+[; ;Public.c: 118: }
+[; ;Public.c: 119: }
+[; ;Public.c: 120: NoBreaker.Addr = 0xFF;
+"120
+[e = . _NoBreaker 0 -> -> 255 `i `uc ]
+[; ;Public.c: 121: return &NoBreaker;
+"121
+[e ) &U _NoBreaker ]
+[e $UE 46  ]
+[; ;Public.c: 122: }
+"122
+[e :UE 46 ]
+}
+"124
+[v _IsSensorLinkWithBreaker `(uc ~T0 @X0 1 ef2`uc`*S3 ]
+"125
+{
+[; ;Public.c: 124: u8 IsSensorLinkWithBreaker(u8 SensorAddr, _Breaker* Breaker)
+[; ;Public.c: 125: {
+[e :U _IsSensorLinkWithBreaker ]
+"124
+[v _SensorAddr `uc ~T0 @X0 1 r1 ]
+[v _Breaker `*S3 ~T0 @X0 1 r2 ]
+"125
+[f ]
+"126
+[v _i `uc ~T0 @X0 1 a ]
+[; ;Public.c: 126: u8 i;
+[; ;Public.c: 127: for (i = 0; i < Breaker->RelevanceRemoteSensorCnt; i++)
+"127
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 57  ]
+"128
+[e :U 54 ]
+[; ;Public.c: 128: {
+{
+[; ;Public.c: 129: if (SensorAddr == Breaker->RemoteTriggerAddrs[i])
+"129
+[e $ ! == -> _SensorAddr `i -> *U + &U . *U _Breaker 9 * -> _i `ux -> -> # *U &U . *U _Breaker 9 `ui `ux `i 58  ]
+[; ;Public.c: 130: return 1;
+"130
+[e ) -> -> 1 `i `uc ]
+[e $UE 53  ]
+[e :U 58 ]
+"131
+}
+"127
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 57 ]
+[e $ < -> _i `i -> . *U _Breaker 11 `i 54  ]
+[e :U 55 ]
+"131
+}
+[; ;Public.c: 131: }
+[; ;Public.c: 132: return 0;
+"132
+[e ) -> -> 0 `i `uc ]
+[e $UE 53  ]
+[; ;Public.c: 133: }
+"133
+[e :UE 53 ]
+}
+"135
+[v _GetBreakerIndex `(uc ~T0 @X0 1 ef1`uc ]
+"136
+{
+[; ;Public.c: 135: u8 GetBreakerIndex(u8 addr)
+[; ;Public.c: 136: {
+[e :U _GetBreakerIndex ]
+"135
+[v _addr `uc ~T0 @X0 1 r1 ]
+"136
+[f ]
+"137
+[v _i `uc ~T0 @X0 1 a ]
+[; ;Public.c: 137: u8 i;
+[; ;Public.c: 138: for (i = 0; i < 5; i++)
+"138
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 5 `i 60  ]
+[e $U 61  ]
+"139
+[e :U 60 ]
+[; ;Public.c: 139: {
+{
+[; ;Public.c: 140: if (Breakers[i].Addr == addr)
+"140
+[e $ ! == -> . *U + &U _Breakers * -> _i `ux -> -> # *U &U _Breakers `ui `ux 0 `i -> _addr `i 63  ]
+[; ;Public.c: 141: return i;
+"141
+[e ) _i ]
+[e $UE 59  ]
+[e :U 63 ]
+"142
+}
+"138
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 5 `i 60  ]
+[e :U 61 ]
+"142
+}
+[; ;Public.c: 142: }
+[; ;Public.c: 143: return 0xFF;
+"143
+[e ) -> -> 255 `i `uc ]
+[e $UE 59  ]
+[; ;Public.c: 144: }
+"144
+[e :UE 59 ]
+}
+"146
+[v _GetBreakerByIndex `(*S3 ~T0 @X0 1 ef1`uc ]
+"147
+{
+[; ;Public.c: 146: _Breaker* GetBreakerByIndex(u8 index)
+[; ;Public.c: 147: {
+[e :U _GetBreakerByIndex ]
+"146
+[v _index `uc ~T0 @X0 1 r1 ]
+"147
+[f ]
+[; ;Public.c: 148: return &Breakers[index];
+"148
+[e ) &U *U + &U _Breakers * -> _index `ux -> -> # *U &U _Breakers `ui `ux ]
+[e $UE 64  ]
+[; ;Public.c: 149: }
+"149
+[e :UE 64 ]
+}
+"151
+[v _GetRemoteSensor `(*S2 ~T0 @X0 1 ef1`uc ]
+"152
+{
+[; ;Public.c: 151: _RemoteSensor* GetRemoteSensor(u8 addr)
+[; ;Public.c: 152: {
+[e :U _GetRemoteSensor ]
+"151
+[v _addr `uc ~T0 @X0 1 r1 ]
+"152
+[f ]
+"153
+[v _i `i ~T0 @X0 1 a ]
+[; ;Public.c: 153: int i;
+[; ;Public.c: 154: for (i = 0; i < 24; i++)
+"154
+{
+[e = _i -> 0 `i ]
+[e $ < _i -> 24 `i 66  ]
+[e $U 67  ]
+"155
+[e :U 66 ]
+[; ;Public.c: 155: {
+{
+[; ;Public.c: 156: if (RemoteSensors[i].Addr == addr)
+"156
+[e $ ! == -> . *U + &U _RemoteSensors * -> -> _i `ui `ux -> -> # *U &U _RemoteSensors `ui `ux 0 `i -> _addr `i 69  ]
+[; ;Public.c: 157: return(&RemoteSensors[i]);
+"157
+[e ) &U *U + &U _RemoteSensors * -> -> _i `ui `ux -> -> # *U &U _RemoteSensors `ui `ux ]
+[e $UE 65  ]
+[e :U 69 ]
+"158
+}
+"154
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 24 `i 66  ]
+[e :U 67 ]
+"158
+}
+[; ;Public.c: 158: }
+[; ;Public.c: 159: return &NullRemoteSensor;
+"159
+[e ) &U _NullRemoteSensor ]
+[e $UE 65  ]
+[; ;Public.c: 160: }
+"160
+[e :UE 65 ]
+}
+"162
+[v _FilterRemoteSensor `(*S2 ~T0 @X0 1 ef1`uc ]
+"163
+{
+[; ;Public.c: 162: _RemoteSensor* FilterRemoteSensor(u8 addr)
+[; ;Public.c: 163: {
+[e :U _FilterRemoteSensor ]
+"162
+[v _addr `uc ~T0 @X0 1 r1 ]
+"163
+[f ]
+"164
+[v _i `uc ~T0 @X0 1 a ]
+"165
+[v _RemoteSensor `*S2 ~T0 @X0 1 a ]
+[; ;Public.c: 164: u8 i;
+[; ;Public.c: 165: _RemoteSensor* RemoteSensor = GetRemoteSensor(addr);
+[e = _RemoteSensor ( _GetRemoteSensor (1 _addr ]
+[; ;Public.c: 166: if (RemoteSensor->Addr == addr)
+"166
+[e $ ! == -> . *U _RemoteSensor 0 `i -> _addr `i 71  ]
+[; ;Public.c: 167: return GetRemoteSensor(addr);
+"167
+[e ) ( _GetRemoteSensor (1 _addr ]
+[e $UE 70  ]
+[e :U 71 ]
+[; ;Public.c: 168: if (RemoteSensor->Addr == 0)
+"168
+[e $ ! == -> . *U _RemoteSensor 0 `i -> 0 `i 72  ]
+[; ;Public.c: 169: {
+"169
+{
+[; ;Public.c: 170: for (i = 0; i < 24; i++)
+"170
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 24 `i 73  ]
+[e $U 74  ]
+"171
+[e :U 73 ]
+[; ;Public.c: 171: {
+{
+[; ;Public.c: 172: if (RemoteSensors[i].Addr == 0)
+"172
+[e $ ! == -> . *U + &U _RemoteSensors * -> _i `ux -> -> # *U &U _RemoteSensors `ui `ux 0 `i -> 0 `i 76  ]
+[; ;Public.c: 173: return(&RemoteSensors[i]);
+"173
+[e ) &U *U + &U _RemoteSensors * -> _i `ux -> -> # *U &U _RemoteSensors `ui `ux ]
+[e $UE 70  ]
+[e :U 76 ]
+"174
+}
+"170
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 24 `i 73  ]
+[e :U 74 ]
+"174
+}
+"175
+}
+[e :U 72 ]
+[; ;Public.c: 174: }
+[; ;Public.c: 175: }
+[; ;Public.c: 177: NoRemoteSensor.Addr = 0xFF;
+"177
+[e = . _NoRemoteSensor 0 -> -> 255 `i `uc ]
+[; ;Public.c: 178: return &NoRemoteSensor;
+"178
+[e ) &U _NoRemoteSensor ]
+[e $UE 70  ]
+[; ;Public.c: 179: }
+"179
+[e :UE 70 ]
+}
+"181
+[v _GetRemoteSensorIndex `(uc ~T0 @X0 1 ef1`uc ]
+"182
+{
+[; ;Public.c: 181: u8 GetRemoteSensorIndex(u8 addr)
+[; ;Public.c: 182: {
+[e :U _GetRemoteSensorIndex ]
+"181
+[v _addr `uc ~T0 @X0 1 r1 ]
+"182
+[f ]
+"183
+[v _i `uc ~T0 @X0 1 a ]
+[; ;Public.c: 183: u8 i;
+[; ;Public.c: 184: for (i = 0; i < 24; i++)
+"184
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 24 `i 78  ]
+[e $U 79  ]
+"185
+[e :U 78 ]
+[; ;Public.c: 185: {
+{
+[; ;Public.c: 186: if (RemoteSensors[i].Addr == addr)
+"186
+[e $ ! == -> . *U + &U _RemoteSensors * -> _i `ux -> -> # *U &U _RemoteSensors `ui `ux 0 `i -> _addr `i 81  ]
+[; ;Public.c: 187: return i;
+"187
+[e ) _i ]
+[e $UE 77  ]
+[e :U 81 ]
+"188
+}
+"184
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 24 `i 78  ]
+[e :U 79 ]
+"188
+}
+[; ;Public.c: 188: }
+[; ;Public.c: 189: return 0xFF;
+"189
+[e ) -> -> 255 `i `uc ]
+[e $UE 77  ]
+[; ;Public.c: 190: }
+"190
+[e :UE 77 ]
+}
+"197
+[v _RemoteSensorAtSwitcher `(uc ~T0 @X0 1 ef1`uc ]
+"198
+{
+[; ;Public.c: 197: u8 RemoteSensorAtSwitcher(u8 Addr)
+[; ;Public.c: 198: {
+[e :U _RemoteSensorAtSwitcher ]
+"197
+[v _Addr `uc ~T0 @X0 1 r1 ]
+"198
+[f ]
+"199
+[v _i `uc ~T0 @X0 1 a ]
+[; ;Public.c: 199: u8 i;
+[; ;Public.c: 200: for (i = 0; i < 5; i++)
+"200
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 5 `i 83  ]
+[e $U 84  ]
+"201
+[e :U 83 ]
+[; ;Public.c: 201: {
+{
+[; ;Public.c: 202: if(Breakers[i].Addr == 0)
+"202
+[e $ ! == -> . *U + &U _Breakers * -> _i `ux -> -> # *U &U _Breakers `ui `ux 0 `i -> 0 `i 86  ]
+[; ;Public.c: 203: continue;
+"203
+[e $U 85  ]
+[e :U 86 ]
+[; ;Public.c: 204: if (IsSensorLinkWithBreaker(Addr, &Breakers[i]))
+"204
+[e $ ! != -> ( _IsSensorLinkWithBreaker (2 , _Addr &U *U + &U _Breakers * -> _i `ux -> -> # *U &U _Breakers `ui `ux `i -> -> -> 0 `i `uc `i 87  ]
+[; ;Public.c: 205: return 1;
+"205
+[e ) -> -> 1 `i `uc ]
+[e $UE 82  ]
+[e :U 87 ]
+"206
+}
+"200
+[e :U 85 ]
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 5 `i 83  ]
+[e :U 84 ]
+"206
+}
+[; ;Public.c: 206: }
+[; ;Public.c: 207: return 0;
+"207
+[e ) -> -> 0 `i `uc ]
+[e $UE 82  ]
+[; ;Public.c: 208: }
+"208
+[e :UE 82 ]
+}
+"210
+[v _CheckRemoteSensor `(v ~T0 @X0 1 ef ]
+"211
+{
+[; ;Public.c: 210: void CheckRemoteSensor(void)
+[; ;Public.c: 211: {
+[e :U _CheckRemoteSensor ]
+[f ]
+"212
+[v _i `uc ~T0 @X0 1 a ]
+[; ;Public.c: 212: u8 i;
+[; ;Public.c: 213: for (i = 0; i < 24; i++)
+"213
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 24 `i 89  ]
+[e $U 90  ]
+"214
+[e :U 89 ]
+[; ;Public.c: 214: {
+{
+[; ;Public.c: 215: if (RemoteSensors[i].Addr == 0)
+"215
+[e $ ! == -> . *U + &U _RemoteSensors * -> _i `ux -> -> # *U &U _RemoteSensors `ui `ux 0 `i -> 0 `i 92  ]
+[; ;Public.c: 216: continue;
+"216
+[e $U 91  ]
+[e :U 92 ]
+[; ;Public.c: 217: if(RemoteSensorAtSwitcher(RemoteSensors[i].Addr))
+"217
+[e $ ! != -> ( _RemoteSensorAtSwitcher (1 . *U + &U _RemoteSensors * -> _i `ux -> -> # *U &U _RemoteSensors `ui `ux 0 `i -> -> -> 0 `i `uc `i 93  ]
+[; ;Public.c: 218: continue;
+"218
+[e $U 91  ]
+[e :U 93 ]
+[; ;Public.c: 219: EraseRemoteSensor(RemoteSensors[i].Addr);
+"219
+[e ( _EraseRemoteSensor (1 . *U + &U _RemoteSensors * -> _i `ux -> -> # *U &U _RemoteSensors `ui `ux 0 ]
+"220
+}
+"213
+[e :U 91 ]
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 24 `i 89  ]
+[e :U 90 ]
+"220
+}
+[; ;Public.c: 220: }
+[; ;Public.c: 221: }
+"221
+[e :UE 88 ]
+}
+"223
+[v _GetChuShu `(ui ~T0 @X0 1 ef1`uc ]
+"224
+{
+[; ;Public.c: 223: u16 GetChuShu(u8 flag)
+[; ;Public.c: 224: {
+[e :U _GetChuShu ]
+"223
+[v _flag `uc ~T0 @X0 1 r1 ]
+"224
+[f ]
+[v F242 `ui ~T0 @X0 -> 4 `i s ]
+[i F242
+:U ..
+"225
+-> -> 1 `i `ui
+-> -> 10 `i `ui
+-> -> 100 `i `ui
+-> -> 1000 `i `ui
+..
+]
+[v _chushu `ui ~T0 @X0 -> 4 `i a ]
+[; ;Public.c: 225: u16 chushu[4] = {1, 10, 100, 1000};
+[e = _chushu F242 ]
+[; ;Public.c: 226: return *(chushu+flag);
+"226
+[e ) *U + &U _chushu * -> _flag `ux -> -> # *U &U _chushu `ui `ux ]
+[e $UE 94  ]
+[; ;Public.c: 227: }
+"227
+[e :UE 94 ]
+}
