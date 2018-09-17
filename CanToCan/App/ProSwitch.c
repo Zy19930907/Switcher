@@ -923,7 +923,11 @@ void SensorOnlineCheck(void)
 		} else
 		{
 			if (MsTickDiff(Breaker->Tick) >= 20000)
+			{
 				Breaker->Flag |= 0x02;
+				Breaker->Addr = 0;
+				Breaker->Crc = 0;
+			}
 		}
 	}
 }
